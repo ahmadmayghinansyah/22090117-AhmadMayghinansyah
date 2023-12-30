@@ -23,6 +23,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+
 /**
  *
  * @author User
@@ -49,31 +50,29 @@ public class inputpeminjam extends javax.swing.JFrame {
         jPinput1 = new javax.swing.JPanel();
         jPinputpeminjaman = new javax.swing.JPanel();
         jLidpeminjaman = new javax.swing.JLabel();
-        jLnis = new javax.swing.JLabel();
         jLnama = new javax.swing.JLabel();
-        jLkelas = new javax.swing.JLabel();
+        jLalatdipinjam = new javax.swing.JLabel();
         jTFidpeminjam = new javax.swing.JTextField();
-        jTFnis = new javax.swing.JTextField();
-        jTFkelaspeminjam = new javax.swing.JTextField();
+        jTFalatdipinjam = new javax.swing.JTextField();
         jTFnamapeminjam = new javax.swing.JTextField();
-        jBclearpeminjaman = new javax.swing.JButton();
         jBtambahpeminjaman = new javax.swing.JButton();
         jBeditpeminjaman = new javax.swing.JButton();
-        jBhapuspeminjaman = new javax.swing.JButton();
         jLtglpeminjaman = new javax.swing.JLabel();
         jTFtglpeminjaman = new javax.swing.JTextField();
         jLtglpengembalian = new javax.swing.JLabel();
         jTFtglpengembalian = new javax.swing.JTextField();
         jLstatus = new javax.swing.JLabel();
         jTFstatus = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
         jPdatapeminjaman = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTablepeminjam = new javax.swing.JTable();
-        jTFcaripeminjam = new javax.swing.JTextField();
-        jBcaripeminjaman = new javax.swing.JButton();
         jBdatapeminjamm = new javax.swing.JButton();
-        jBcetakbarcode = new javax.swing.JButton();
-        jBkembali = new javax.swing.JButton();
+        jBcaripeminjaman = new javax.swing.JButton();
+        jTFcari = new javax.swing.JTextField();
+        jButton4 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -86,36 +85,22 @@ public class inputpeminjam extends javax.swing.JFrame {
         jLidpeminjaman.setForeground(new java.awt.Color(242, 242, 242));
         jLidpeminjaman.setText("ID Peminjam");
 
-        jLnis.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
-        jLnis.setForeground(new java.awt.Color(242, 242, 242));
-        jLnis.setText("NIS");
-
         jLnama.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
         jLnama.setForeground(new java.awt.Color(242, 242, 242));
-        jLnama.setText("Nama");
+        jLnama.setText("Nama Siswa");
 
-        jLkelas.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
-        jLkelas.setForeground(new java.awt.Color(242, 242, 242));
-        jLkelas.setText("Kelas");
+        jLalatdipinjam.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
+        jLalatdipinjam.setForeground(new java.awt.Color(242, 242, 242));
+        jLalatdipinjam.setText("Alat dipinjam");
 
         jTFidpeminjam.setBackground(new java.awt.Color(0, 173, 181));
         jTFidpeminjam.setForeground(new java.awt.Color(255, 255, 255));
 
-        jTFnis.setBackground(new java.awt.Color(0, 173, 181));
-        jTFnis.setForeground(new java.awt.Color(255, 255, 255));
-
-        jTFkelaspeminjam.setBackground(new java.awt.Color(0, 173, 181));
-        jTFkelaspeminjam.setForeground(new java.awt.Color(255, 255, 255));
+        jTFalatdipinjam.setBackground(new java.awt.Color(0, 173, 181));
+        jTFalatdipinjam.setForeground(new java.awt.Color(255, 255, 255));
 
         jTFnamapeminjam.setBackground(new java.awt.Color(0, 173, 181));
         jTFnamapeminjam.setForeground(new java.awt.Color(255, 255, 255));
-
-        jBclearpeminjaman.setText("Clear");
-        jBclearpeminjaman.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBclearpeminjamanActionPerformed(evt);
-            }
-        });
 
         jBtambahpeminjaman.setText("Tambah");
         jBtambahpeminjaman.addActionListener(new java.awt.event.ActionListener() {
@@ -131,30 +116,40 @@ public class inputpeminjam extends javax.swing.JFrame {
             }
         });
 
-        jBhapuspeminjaman.setText("Hapus");
-        jBhapuspeminjaman.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBhapuspeminjamanActionPerformed(evt);
-            }
-        });
-
         jLtglpeminjaman.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
         jLtglpeminjaman.setForeground(new java.awt.Color(242, 242, 242));
         jLtglpeminjaman.setText("Tanggal Peminjaman");
 
         jTFtglpeminjaman.setBackground(new java.awt.Color(0, 173, 181));
+        jTFtglpeminjaman.setForeground(new java.awt.Color(255, 255, 255));
 
         jLtglpengembalian.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
         jLtglpengembalian.setForeground(new java.awt.Color(242, 242, 242));
         jLtglpengembalian.setText("Tanggal Pengembalian");
 
         jTFtglpengembalian.setBackground(new java.awt.Color(0, 173, 181));
+        jTFtglpengembalian.setForeground(new java.awt.Color(255, 255, 255));
 
         jLstatus.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
         jLstatus.setForeground(new java.awt.Color(242, 242, 242));
         jLstatus.setText("Status");
 
         jTFstatus.setBackground(new java.awt.Color(0, 173, 181));
+        jTFstatus.setForeground(new java.awt.Color(255, 255, 255));
+
+        jButton1.setText("Hapus");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jButton2.setText("Clear");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPinputpeminjamanLayout = new javax.swing.GroupLayout(jPinputpeminjaman);
         jPinputpeminjaman.setLayout(jPinputpeminjamanLayout);
@@ -162,36 +157,34 @@ public class inputpeminjam extends javax.swing.JFrame {
             jPinputpeminjamanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPinputpeminjamanLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPinputpeminjamanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPinputpeminjamanLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jBclearpeminjaman))
+                .addGroup(jPinputpeminjamanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLnama)
+                    .addComponent(jLalatdipinjam)
+                    .addComponent(jLidpeminjaman)
+                    .addComponent(jLtglpeminjaman)
+                    .addComponent(jLstatus)
+                    .addComponent(jTFtglpengembalian)
+                    .addComponent(jTFtglpeminjaman)
+                    .addComponent(jLtglpengembalian, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jTFstatus)
+                    .addComponent(jTFalatdipinjam)
+                    .addComponent(jTFnamapeminjam)
+                    .addComponent(jTFidpeminjam))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPinputpeminjamanLayout.createSequentialGroup()
+                .addGroup(jPinputpeminjamanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButton2)
                     .addGroup(jPinputpeminjamanLayout.createSequentialGroup()
-                        .addGroup(jPinputpeminjamanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLnama)
-                            .addComponent(jLkelas)
-                            .addComponent(jLidpeminjaman)
-                            .addComponent(jLnis)
-                            .addComponent(jTFidpeminjam, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTFnis, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTFnamapeminjam, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPinputpeminjamanLayout.createSequentialGroup()
-                                .addComponent(jBtambahpeminjaman)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jBeditpeminjaman)
-                                .addGap(18, 18, 18)
-                                .addComponent(jBhapuspeminjaman))
-                            .addComponent(jLtglpeminjaman)
-                            .addGroup(jPinputpeminjamanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jTFtglpeminjaman, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 220, Short.MAX_VALUE)
-                                .addComponent(jTFkelaspeminjam, javax.swing.GroupLayout.Alignment.LEADING))
-                            .addComponent(jLtglpengembalian)
-                            .addComponent(jLstatus)
-                            .addComponent(jTFtglpengembalian, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTFstatus, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 34, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addComponent(jBtambahpeminjaman)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jBeditpeminjaman)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton1)))
+                .addGap(0, 9, Short.MAX_VALUE))
         );
+
+        jPinputpeminjamanLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jBeditpeminjaman, jBtambahpeminjaman, jButton1, jButton2});
+
         jPinputpeminjamanLayout.setVerticalGroup(
             jPinputpeminjamanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPinputpeminjamanLayout.createSequentialGroup()
@@ -200,17 +193,13 @@ public class inputpeminjam extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTFidpeminjam, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jLnis)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTFnis, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
                 .addComponent(jLnama)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTFnamapeminjam, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jLkelas)
+                .addComponent(jLalatdipinjam)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTFkelaspeminjam, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jTFalatdipinjam, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLtglpeminjaman)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -224,14 +213,16 @@ public class inputpeminjam extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTFstatus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jBclearpeminjaman)
+                .addComponent(jButton2)
                 .addGap(18, 18, 18)
                 .addGroup(jPinputpeminjamanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBtambahpeminjaman)
                     .addComponent(jBeditpeminjaman)
-                    .addComponent(jBhapuspeminjaman))
+                    .addComponent(jButton1))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        jPinputpeminjamanLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jBeditpeminjaman, jBtambahpeminjaman, jButton1, jButton2});
 
         jPdatapeminjaman.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Data Peminjaman", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Impact", 0, 24), new java.awt.Color(238, 238, 238))); // NOI18N
         jPdatapeminjaman.setOpaque(false);
@@ -243,11 +234,11 @@ public class inputpeminjam extends javax.swing.JFrame {
 
             },
             new String [] {
-                "ID Peminjaman", "NIS", "Nama", "Kelas", "Peminjaman", "Pengembalian", "Status"
+                "ID_Peminjam", "Nama_Siswa", "Alat_Dipinjam", "Tanggal_Peminjaman", "Tanggal_Pengembalian", "Status_Pengembalian"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false
+                false, false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -262,18 +253,7 @@ public class inputpeminjam extends javax.swing.JFrame {
             jTablepeminjam.getColumnModel().getColumn(3).setResizable(false);
             jTablepeminjam.getColumnModel().getColumn(4).setResizable(false);
             jTablepeminjam.getColumnModel().getColumn(5).setResizable(false);
-            jTablepeminjam.getColumnModel().getColumn(6).setResizable(false);
         }
-
-        jTFcaripeminjam.setBackground(new java.awt.Color(0, 173, 181));
-        jTFcaripeminjam.setForeground(new java.awt.Color(255, 255, 255));
-
-        jBcaripeminjaman.setText("Cari");
-        jBcaripeminjaman.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBcaripeminjamanActionPerformed(evt);
-            }
-        });
 
         jBdatapeminjamm.setText("Data");
         jBdatapeminjamm.addActionListener(new java.awt.event.ActionListener() {
@@ -282,10 +262,17 @@ public class inputpeminjam extends javax.swing.JFrame {
             }
         });
 
-        jBcetakbarcode.setText("Cetak Barcode");
-        jBcetakbarcode.addActionListener(new java.awt.event.ActionListener() {
+        jBcaripeminjaman.setText("Cari");
+        jBcaripeminjaman.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBcetakbarcodeActionPerformed(evt);
+                jBcaripeminjamanActionPerformed(evt);
+            }
+        });
+
+        jButton4.setText("Cetak Barcode");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
             }
         });
 
@@ -298,34 +285,39 @@ public class inputpeminjam extends javax.swing.JFrame {
                 .addGroup(jPdatapeminjamanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1)
                     .addGroup(jPdatapeminjamanLayout.createSequentialGroup()
-                        .addComponent(jTFcaripeminjam, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jTFcari, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(jBcaripeminjaman)
-                        .addGap(18, 18, 18)
+                        .addGap(21, 21, 21)
                         .addComponent(jBdatapeminjamm)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jBcetakbarcode)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton4)
+                        .addGap(0, 257, Short.MAX_VALUE)))
                 .addContainerGap())
         );
+
+        jPdatapeminjamanLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jBcaripeminjaman, jBdatapeminjamm, jButton4});
+
         jPdatapeminjamanLayout.setVerticalGroup(
             jPdatapeminjamanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPdatapeminjamanLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPdatapeminjamanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTFcaripeminjam, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jBcaripeminjaman)
                     .addComponent(jBdatapeminjamm)
-                    .addComponent(jBcetakbarcode))
+                    .addComponent(jBcaripeminjaman)
+                    .addComponent(jTFcari, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton4))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        jBkembali.setText("Kembali");
-        jBkembali.addActionListener(new java.awt.event.ActionListener() {
+        jPdatapeminjamanLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jBcaripeminjaman, jBdatapeminjamm, jButton4});
+
+        jButton3.setText("Kembali");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBkembaliActionPerformed(evt);
+                jButton3ActionPerformed(evt);
             }
         });
 
@@ -335,25 +327,26 @@ public class inputpeminjam extends javax.swing.JFrame {
             jPinput1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPinput1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPinputpeminjaman, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jPdatapeminjaman, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPinput1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jBkembali)
-                .addGap(31, 31, 31))
+                .addGroup(jPinput1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPinput1Layout.createSequentialGroup()
+                        .addComponent(jPinputpeminjaman, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPdatapeminjaman, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPinput1Layout.createSequentialGroup()
+                        .addComponent(jButton3)
+                        .addGap(19, 19, 19))))
         );
         jPinput1Layout.setVerticalGroup(
             jPinput1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPinput1Layout.createSequentialGroup()
                 .addGap(17, 17, 17)
-                .addComponent(jBkembali)
+                .addComponent(jButton3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPinput1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPinput1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPinputpeminjaman, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPdatapeminjaman, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -373,75 +366,67 @@ public class inputpeminjam extends javax.swing.JFrame {
     private void jBdatapeminjammActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBdatapeminjammActionPerformed
         // TODO add your handling code here:
         try {
-    Connection conn = dbkoneksi.getConnection();
-    Statement stmt = conn.createStatement();
-    String query = "SELECT * FROM peminjaman";
-    ResultSet rs = stmt.executeQuery(query);
-
-    DefaultTableModel model = new DefaultTableModel();
-    model.addColumn("ID Peminjaman");
-    model.addColumn("NIS");
-    model.addColumn("Nama Peminjam");
-    model.addColumn("Kelas");
-    model.addColumn("Tanggal Peminjaman");
-    model.addColumn("Tanggal Pengembalian");
-    model.addColumn("Status");
-
-    while (rs.next()) {
-        int idPeminjaman = rs.getInt("id_peminjaman");
-        String nis = rs.getString("nis");
-        String namaPeminjam = rs.getString("nama_peminjam");
-        String kelas = rs.getString("kelas");
-        String tanggalPeminjaman = rs.getString("peminjaman");
-        String tanggalPengembalian = rs.getString("pengembalian");
-        String status = rs.getString("status");
-
-        model.addRow(new Object[]{idPeminjaman, nis, namaPeminjam, kelas, tanggalPeminjaman, tanggalPengembalian, status});
+        jTablepeminjam.setModel(new DefaultTableModel());
+        DefaultTableModel model =(DefaultTableModel)jTablepeminjam.getModel();
+        Connection conn = (Connection) dbkoneksi.getConnection();
+        Statement st = conn.createStatement();
+        String query="SELECT ID_Peminjam AS Id, Nama_Peminjam AS Nama, Alat_Dipinjam AS Alat, Tanggal_Peminjaman AS peminjaman,"
+                + "Tanggal_Pengembalian AS pengembalian, Status_Pengembalian AS Status FROM peminjamanalat ORDER BY ID_Peminjam";
+        ResultSet rs =st.executeQuery(query);
+        ResultSetMetaData rsmd=(ResultSetMetaData) rs.getMetaData();
+        
+        int cols =rsmd.getColumnCount();
+        String[] colName=new String[cols];
+        for(int i=0;i<cols;i++)
+            colName[i]=rsmd.getColumnName(i+1);
+        model.setColumnIdentifiers(colName);
+        String Id,Nama,Alat,Peminjaman,Pengembalian,Status;
+        while (rs.next()){
+            Id=rs.getString(1);
+            Nama=rs.getString(2);
+            Alat=rs.getString(3);
+            Peminjaman=rs.getString(4);
+            Pengembalian=rs.getString(5);
+            Status=rs.getString(6);
+            String[] row={Id,Nama,Alat,Peminjaman,Pengembalian,Status};
+            model.addRow(row);
+        }
+        st.close();
+        conn.close();
+    } catch (SQLException e) {
+        e.printStackTrace();
     }
-
-    jTablepeminjam.setModel(model); // Mengatur model tabel dengan model yang telah dibuat
-
-    // Jangan lupa untuk menutup koneksi dan statement
-    rs.close();
-    stmt.close();
-    conn.close();
-} catch (SQLException e) {
-    e.printStackTrace();
-}
-
     }//GEN-LAST:event_jBdatapeminjammActionPerformed
 
     private void jBtambahpeminjamanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtambahpeminjamanActionPerformed
         // TODO add your handling code here:
 String id = jTFidpeminjam.getText();
-String nis = jTFnis.getText();
 String nama = jTFnamapeminjam.getText();
-String kelas = jTFkelaspeminjam.getText();
+String alat = jTFalatdipinjam.getText();
 String peminjaman = jTFtglpeminjaman.getText();
 String pengembalian = jTFtglpengembalian.getText();
 String status = jTFstatus.getText();
 
-if (id.isEmpty() || nama.isEmpty() || nis.isEmpty() || nama.isEmpty() || kelas.isEmpty() || peminjaman.isEmpty() 
+if (id.isEmpty() ||  nama.isEmpty() || alat.isEmpty() || peminjaman.isEmpty() 
         || pengembalian.isEmpty() || status.isEmpty()) {
     JOptionPane.showMessageDialog(this, "Harap isi semua kolom", "Coba lagi", JOptionPane.ERROR_MESSAGE);
 } else {
     try {
         DefaultTableModel model = (DefaultTableModel) jTablepeminjam.getModel();
-        model.addRow(new Object[]{id, nis, nama, kelas, peminjaman, pengembalian, status});
+        model.addRow(new Object[]{id, nama, alat, peminjaman, pengembalian, status});
 
         jTFidpeminjam.setText("");
-        jTFnis.setText("");
         jTFnamapeminjam.setText("");
-        jTFkelaspeminjam.setText("");
+        jTFalatdipinjam.setText("");
         jTFtglpeminjaman.setText("");
         jTFtglpengembalian.setText("");
         jTFstatus.setText("");
 
         Connection k = dbkoneksi.getConnection();
         Statement s = k.createStatement();
-        String q = "INSERT INTO peminjaman "
-                 + "(id_peminjam, nis, nama_peminjam, kelas, peminjaman, pengembalian, status) "
-                 + "VALUES ('" + id + "','" + nis + "','" + nama + "','" + kelas + "','" + peminjaman + "','"
+        String q = "INSERT INTO peminjamanalat "
+                 + "(ID_Peminjam, Nama_Peminjam, Alat_Dipinjam, Tanggal_Peminjaman, Tanggal_Pengembalian, Status_Pengembalian) "
+                 + "VALUES ('" + id + "','" + nama + "','" + alat + "','" + peminjaman + "','"
                 + pengembalian + "','" + status + "')";
         s.executeUpdate(q);
         System.out.println("Data berhasil disimpan ke database!");
@@ -453,49 +438,45 @@ if (id.isEmpty() || nama.isEmpty() || nis.isEmpty() || nama.isEmpty() || kelas.i
 
     private void jBeditpeminjamanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBeditpeminjamanActionPerformed
         // TODO add your handling code here:
- int row = jTablepeminjam.getSelectedRow(); // Mendapatkan baris yang dipilih di tabel
-if (row < 0) {
-    JOptionPane.showMessageDialog(this, "Pilih salah satu data!", "Coba lagi!", JOptionPane.ERROR_MESSAGE);
-} else {
-    DefaultTableModel model = (DefaultTableModel) jTablepeminjam.getModel();
+int row = jTablepeminjam.getSelectedRow();
 
-    int idToUpdate = Integer.parseInt(model.getValueAt(row, 0).toString()); // Ambil nilai ID dari baris yang dipilih
-
-    String newid = jTFidpeminjam.getText(); // Mengambil nilai yang ingin diperbarui dari field atau inputan
-    String newnis = jTFnis.getText();
-    String newnamapeminjam = jTFnamapeminjam.getText();
-    String newkelaspeminjam = jTFkelaspeminjam.getText();
-    String newtglpeminjaman = jTFtglpeminjaman.getText();
-    String newtglpengembalian = jTFtglpengembalian.getText();
-    String newstatus = jTFstatus.getText();
-    // Mengambil nilai yang ingin diperbarui dari field atau inputan
-
-    if (newid.isEmpty() || newnis.isEmpty() || newnamapeminjam.isEmpty() || newkelaspeminjam.isEmpty() || newtglpeminjaman.isEmpty() || newtglpengembalian.isEmpty() || newstatus.isEmpty()) {
-        JOptionPane.showMessageDialog(this, "Harap isi semua kolom", "Coba lagi", JOptionPane.ERROR_MESSAGE);
+    if (row < 0) {
+        JOptionPane.showMessageDialog(this, "Pilih salah satu data!", "Coba lagi!", JOptionPane.ERROR_MESSAGE);
     } else {
-        try {
-            // Menghapus baris yang ada di tabel
-            model.removeRow(row);
+        DefaultTableModel model = (DefaultTableModel) jTablepeminjam.getModel();
+        int kodeToUpdate = Integer.parseInt(model.getValueAt(row, 0).toString()); // Ambil nilai kode alat dari baris yang dipilih
 
-            // Menambahkan baris dengan data yang diperbarui
-            model.insertRow(row, new Object[]{idToUpdate, newid, newnis, newnamapeminjam, newkelaspeminjam, newtglpeminjaman, newtglpengembalian, newstatus});
+        String ID_Peminjam = jTFidpeminjam.getText();
+String Nama_Peminjam = jTFnamapeminjam.getText();
+String Alat_Dipinjam = jTFalatdipinjam.getText();
+String Tanggal_Peminjaman = jTFtglpeminjaman.getText();
+String Tanggal_Pengembalian = jTFtglpengembalian.getText();
+String Status_Pengembalian = jTFstatus.getText();
 
-            Connection conn = dbkoneksi.getConnection();
-            Statement stmt = conn.createStatement();
-            String query = "UPDATE nama_tabel SET id_peminjam = '" + newid + "', nis = '" + newnis + "', nama_peminjam = '" + newnamapeminjam + "', kelas = '" + newkelaspeminjam + "', peminjaman = '" + newtglpeminjaman + "', pengembalian = '" + newtglpengembalian + "', status = '" + newstatus + "' WHERE id_peminjam = " + idToUpdate;
-            stmt.executeUpdate(query);
-            System.out.println("Data berhasil diperbarui di database!");
-            stmt.close();
-            conn.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
+        // Jika tidak ada data yang dipilih untuk diubah
+        if (ID_Peminjam.isEmpty() || Nama_Peminjam.isEmpty() || Alat_Dipinjam.isEmpty() || Tanggal_Peminjaman.isEmpty() || Tanggal_Pengembalian.isEmpty() || Status_Pengembalian.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Harap isi semua kolom", "Coba lagi", JOptionPane.ERROR_MESSAGE);
+        } else {
+            try {
+                // Hapus baris yang ada
+                model.removeRow(row);
+
+                // Tambahkan baris yang diperbarui
+                model.insertRow(row, new Object[]{ID_Peminjam, Nama_Peminjam, Alat_Dipinjam, Tanggal_Peminjaman, Tanggal_Pengembalian, Status_Pengembalian});
+
+                Connection k = dbkoneksi.getConnection();
+                Statement s = k.createStatement();
+                String q = "UPDATE peminjamanalat SET ID_Peminjam='" + ID_Peminjam + "', Nama_Peminjam='" + Nama_Peminjam + "', Alat_Dipinjam='" + Alat_Dipinjam + "', Tanggal_Peminjaman='" + Tanggal_Peminjaman + "', Tanggal_Pengembalian='" + Tanggal_Pengembalian + "', Status_Pengembalian='" + Status_Pengembalian +"' WHERE ID_Peminjam=" + kodeToUpdate;
+                s.executeUpdate(q);
+                System.out.println("Data berhasil diperbarui di database!");
+            } catch (SQLException e) {
+                System.err.println("Error: " + e.getMessage());
+            }
         }
     }
-}
-
     }//GEN-LAST:event_jBeditpeminjamanActionPerformed
 
-    private void jBhapuspeminjamanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBhapuspeminjamanActionPerformed
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         int row = jTablepeminjam.getSelectedRow();
     
@@ -509,42 +490,45 @@ if (row < 0) {
         try {
             Connection k = dbkoneksi.getConnection();
             Statement s = k.createStatement();
-            String q = "DELETE FROM peminjaman WHERE id_peminjaman=" + kodeToDelete; 
+            String q = "DELETE FROM peminjamanalat WHERE ID_Peminjam=" + kodeToDelete; 
             s.executeUpdate(q);
             System.out.println("Data berhasil dihapus dari database!");
         } catch (SQLException e) {
             System.err.println("Error: " + e.getMessage());
         }
     }
-    }//GEN-LAST:event_jBhapuspeminjamanActionPerformed
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        jTFidpeminjam.setText("");
+        jTFnamapeminjam.setText("");
+        jTFalatdipinjam.setText("");
+        jTFtglpeminjaman.setText("");
+        jTFtglpengembalian.setText("");
+        jTFstatus.setText("");
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jBcaripeminjamanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBcaripeminjamanActionPerformed
-        // TODO add your handling code here:
-DefaultTableModel model = new DefaultTableModel();
-
-// Kolom-kolom yang ingin ditampilkan di tabel
-model.addColumn("ID Peminjam");
-model.addColumn("Nama Peminjam");
-model.addColumn("Kelas");
-model.addColumn("Tanggal Peminjaman");
-model.addColumn("Tanggal Pengembalian");
-model.addColumn("Status");
+         // TODO add your handling code here:
+DefaultTableModel model = (DefaultTableModel) jTablepeminjam.getModel();
+model.setRowCount(0); // Menghapus semua baris yang ada di tabel
 
 try {
-    String searchTerm = jTFcaripeminjam.getText(); // Ambil teks pencarian
+    String searchTerm = jTFcari.getText();
     Connection conn = dbkoneksi.getConnection();
     Statement stmt = conn.createStatement();
-    String query = "SELECT id_peminjam, nama_peminjam, kelas, peminjaman, pengembalian, status FROM peminjaman WHERE nama_peminjam LIKE '%" + searchTerm + "%'";
+    String query = "SELECT * FROM peminjamanalat WHERE ID_Peminjam LIKE '%" + searchTerm + "%'";
     ResultSet rs = stmt.executeQuery(query);
 
     while (rs.next()) {
         Object[] row = {
-            rs.getInt("id_peminjam"),
-            rs.getString("nama_peminjam"),
-            rs.getString("kelas"),
-            rs.getString("peminjaman"),
-            rs.getString("pengembalian"),
-            rs.getString("status")
+            rs.getInt("ID_Peminjam"),
+            rs.getString("Nama_Peminjam"),
+            rs.getString("Alat_Dipinjam"),
+            rs.getString("Tanggal_Peminjaman"),
+            rs.getString("Tanggal_Pengembalian"),
+            rs.getString("Status_Pengembalian")
         };
         model.addRow(row);
     }
@@ -552,30 +536,22 @@ try {
     rs.close();
     stmt.close();
     conn.close();
-} catch (SQLException ex) {
-    ex.printStackTrace();
+} catch (SQLException e) {
+    e.printStackTrace();
 }
 
+// Menampilkan hasil pencarian di tabel
 jTablepeminjam.setModel(model);
 
-    
     }//GEN-LAST:event_jBcaripeminjamanActionPerformed
 
-    private void jBclearpeminjamanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBclearpeminjamanActionPerformed
-        // TODO add your handling code here:
-        jTFidpeminjam.setText("");
-        jTFnis.setText("");
-        jTFnamapeminjam.setText("");
-        jTFkelaspeminjam.setText("");
-    }//GEN-LAST:event_jBclearpeminjamanActionPerformed
-
-    private void jBkembaliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBkembaliActionPerformed
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
         new main().setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jBkembaliActionPerformed
+    }//GEN-LAST:event_jButton3ActionPerformed
 
-    private void jBcetakbarcodeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBcetakbarcodeActionPerformed
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
         int selectedRow = jTablepeminjam.getSelectedRow();
 if (selectedRow != -1) {
@@ -609,8 +585,7 @@ if (selectedRow != -1) {
 } else {
     JOptionPane.showMessageDialog(this, "Pilih baris terlebih dahulu", "Coba lagi", JOptionPane.ERROR_MESSAGE);
 }
-
-    }//GEN-LAST:event_jBcetakbarcodeActionPerformed
+    }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -649,17 +624,16 @@ if (selectedRow != -1) {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBcaripeminjaman;
-    private javax.swing.JButton jBcetakbarcode;
-    private javax.swing.JButton jBclearpeminjaman;
     private javax.swing.JButton jBdatapeminjamm;
     private javax.swing.JButton jBeditpeminjaman;
-    private javax.swing.JButton jBhapuspeminjaman;
-    private javax.swing.JButton jBkembali;
     private javax.swing.JButton jBtambahpeminjaman;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JLabel jLalatdipinjam;
     private javax.swing.JLabel jLidpeminjaman;
-    private javax.swing.JLabel jLkelas;
     private javax.swing.JLabel jLnama;
-    private javax.swing.JLabel jLnis;
     private javax.swing.JLabel jLstatus;
     private javax.swing.JLabel jLtglpeminjaman;
     private javax.swing.JLabel jLtglpengembalian;
@@ -667,11 +641,10 @@ if (selectedRow != -1) {
     private javax.swing.JPanel jPinput1;
     private javax.swing.JPanel jPinputpeminjaman;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField jTFcaripeminjam;
+    private javax.swing.JTextField jTFalatdipinjam;
+    private javax.swing.JTextField jTFcari;
     private javax.swing.JTextField jTFidpeminjam;
-    private javax.swing.JTextField jTFkelaspeminjam;
     private javax.swing.JTextField jTFnamapeminjam;
-    private javax.swing.JTextField jTFnis;
     private javax.swing.JTextField jTFstatus;
     private javax.swing.JTextField jTFtglpeminjaman;
     private javax.swing.JTextField jTFtglpengembalian;

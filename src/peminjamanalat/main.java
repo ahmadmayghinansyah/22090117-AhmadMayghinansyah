@@ -31,6 +31,7 @@ public class main extends javax.swing.JFrame {
         jPmain2 = new javax.swing.JPanel();
         jBtambahpeminjam = new javax.swing.JButton();
         jBdataalat = new javax.swing.JButton();
+        jBriwayat = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -56,6 +57,14 @@ public class main extends javax.swing.JFrame {
             }
         });
 
+        jBriwayat.setBackground(new java.awt.Color(255, 153, 153));
+        jBriwayat.setText("Riwayat");
+        jBriwayat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBriwayatActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPmain2Layout = new javax.swing.GroupLayout(jPmain2);
         jPmain2.setLayout(jPmain2Layout);
         jPmain2Layout.setHorizontalGroup(
@@ -64,7 +73,10 @@ public class main extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPmain2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jBtambahpeminjam, javax.swing.GroupLayout.DEFAULT_SIZE, 540, Short.MAX_VALUE)
-                    .addComponent(jBdataalat, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPmain2Layout.createSequentialGroup()
+                        .addComponent(jBdataalat, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jBriwayat, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPmain2Layout.setVerticalGroup(
@@ -73,7 +85,9 @@ public class main extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jBtambahpeminjam, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jBdataalat, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPmain2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jBdataalat, javax.swing.GroupLayout.DEFAULT_SIZE, 96, Short.MAX_VALUE)
+                    .addComponent(jBriwayat, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -139,6 +153,12 @@ public class main extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
+    private void jBriwayatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBriwayatActionPerformed
+        // TODO add your handling code here:
+        new Riwayat().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jBriwayatActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -176,6 +196,7 @@ public class main extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jBdataalat;
+    private javax.swing.JButton jBriwayat;
     private javax.swing.JButton jBtambahpeminjam;
     private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPmain1;
